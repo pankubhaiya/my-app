@@ -1,0 +1,18 @@
+<p>dashboard-component works!</p>
+<input type="text" [(ngModel)]="searchQuery" (input)="applyFilter()" placeholder="Search Product Name">
+<table>
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th (click)="toggleSortByPrice()">Price</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of filteredProducts">
+      <td><a [routerLink]="['/product', product.id]">{{ product.productName }}</a></td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.category }}</td>
+    </tr>
+  </tbody>
+</table>
