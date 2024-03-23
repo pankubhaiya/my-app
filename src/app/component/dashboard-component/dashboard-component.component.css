@@ -1,0 +1,69 @@
+/* dashboard-component.component.css */
+
+/* Style for the paragraph tag */
+p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Style for the input field */
+  input[type="text"] {
+    width: 300px;
+    padding: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style for the table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Style for table headers */
+  th {
+    padding: 8px;
+    text-align: left;
+    background-color: #f2f2f2;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  /* Style for table cells */
+  td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Style for table rows */
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Style for anchor tags */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  /* Style for anchor tags on hover */
+  a:hover {
+    text-decoration: underline;
+  }
+  .sort-btn {
+    display: inline-block;
+    margin: 20px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sort-btn:hover {
+    background-color: #0056b3;
+  }
+  

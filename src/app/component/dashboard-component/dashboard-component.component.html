@@ -1,16 +1,17 @@
 <p>dashboard-component works!</p>
 <input type="text" [(ngModel)]="searchQuery" (input)="applyFilter()" placeholder="Search Product Name">
+<div class="sort-btn" (click)="toggleSortByPrice()">Sort with price</div>
 <table>
   <thead>
     <tr>
       <th>Product Name</th>
-      <th (click)="toggleSortByPrice()">Price</th>
+      <th>Price</th>
       <th>Category</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let product of filteredproducts">
-      <td><a >{{ product.productName }}</a></td>
+      <td><a routerLink='/product'>{{ product.productName }}</a></td>
       <td>{{ product.price }}</td>
       <td>{{ product.category }}</td>
     </tr>

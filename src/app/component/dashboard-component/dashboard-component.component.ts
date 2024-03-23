@@ -3,11 +3,12 @@ import { DataService } from '../../services/data.service';
 import { product } from '../../model/product';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard-component',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,RouterLink,RouterLinkActive],
   templateUrl: './dashboard-component.component.html',
   styleUrls: ['./dashboard-component.component.css']
 })
