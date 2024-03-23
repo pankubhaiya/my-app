@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { product } from '../../model/product';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-dashboard-component',
+  standalone: true,
+  imports: [CommonModule,FormsModule],
   templateUrl: './dashboard-component.component.html',
   styleUrls: ['./dashboard-component.component.css']
 })
@@ -20,10 +24,9 @@ export class DashboardComponentComponent implements OnInit {
   }
 
   fetchproducts(): void {
-    this.dataService.getProductData().subscribe((data: product[]) => {
-      this.products = data;
-      this.filteredproducts = [...this.products];
-    });
+    let data = this.dataService.getProductData()
+    this.products = data;
+    this.filteredproducts = [...this.products];
   }
 
   toggleSortByPrice(): void {

@@ -8,9 +8,8 @@ export class DataService {
 
   constructor() { }
 
-  getProductData(): Observable<product[]> {
-    // Example of fetching data from an API
-    // You can replace this with your actual data fetching logic
+  getProductData() {
+    
     const products: product[] = [
       { id: 1, productName: 'Laptop', price: 1200, category: 'Electronics' },
       { id: 2, productName: 'Smartphone', price: 800, category: 'Electronics' },
@@ -18,6 +17,6 @@ export class DataService {
       { id: 4, productName: 'Desk', price: 300, category: 'Furniture' },
       { id: 5, productName: 'Chair', price: 100, category: 'Furniture' },
     ];
-    return of(products);
+    return products
   }
 }
