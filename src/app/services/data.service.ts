@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { product } from '../model/product';
 
 @Injectable({
   providedIn: 'root'
@@ -6,9 +7,11 @@ import { Injectable } from '@angular/core';
 export class DataService {
 
   constructor() { }
-  getProductData(): Observable<Product[]> {
-    // Assume products data is fetched from an API, for simplicity using dummy data directly.
-    const products: Product[] = [
+
+  getProductData(): Observable<product[]> {
+    // Example of fetching data from an API
+    // You can replace this with your actual data fetching logic
+    const products: product[] = [
       { id: 1, productName: 'Laptop', price: 1200, category: 'Electronics' },
       { id: 2, productName: 'Smartphone', price: 800, category: 'Electronics' },
       { id: 3, productName: 'Headphones', price: 150, category: 'Electronics' },
